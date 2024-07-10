@@ -1,17 +1,20 @@
+import React, { Component } from "react";
+
 class UserProfile extends Component {
     constructor(props) {
         super(props);
         this.state = { name: 'Alex' };
 
-        this.changename = this.changename.bind(this)
+        this.changeName = this.changeName.bind(this)
     }
 
     //Binded the this function and changed this to setstate
     changeName() {
-        this.setState = 'Charlie';
+        this.setState({name: 'Charlie'})
     }
 
     render() {
+    
         return (
             <div>
                 <h1>User Profile</h1>
@@ -21,3 +24,5 @@ class UserProfile extends Component {
         );
     }
 }
+
+export default UserProfile
